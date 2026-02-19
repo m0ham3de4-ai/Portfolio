@@ -1,0 +1,219 @@
+:root {
+    --bg-color: #f5f7fa;
+    --text-color: #1a1a1a;
+    --header-bg: #dbe4ec;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --btn-bg: #25343F;
+    --btn-text: #ffffff;
+}
+
+.dark-mode {
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --header-bg: #1e293b;
+    --card-bg: #1e293b;
+    --card-shadow: rgba(0, 0, 0, 0.6);
+    --btn-bg: #38bdf8;
+    --btn-text: #0f172a;
+}
+section{
+    scroll-margin-top: 100px;
+}
+*{
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.home{
+    color:black;
+    font-size: 20px;
+    padding: 15px;
+    width: auto;
+    border-radius: 10px;   
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--header-bg);
+}
+.home span{
+    font-size: 25px !important;
+}
+span{
+    font-size: 50px;
+}
+.nav {
+    float: right; 
+}
+.nav a:hover{
+    background-color: #25343F;
+    border-radius: 5px;
+}
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.about {
+    color: #000;
+    text-align: center;
+    width: auto;
+}
+.about p{
+    font-size: 22px;
+}
+.skills{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 25px;
+}
+.skills .cards{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 0;
+    margin-top: 45px;
+    
+}
+.skills .cards div {
+     color: black;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+        background-color: var(--card-bg);
+    box-shadow: 0 4px 10px var(--card-shadow);
+}
+.skills .cards div:hover {
+    background-color: #000;
+    transition-duration: 0.3s;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px rgba(24, 30, 18, 1);
+    color: var(--text-color);
+}
+.project {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+}
+
+ .project .Project-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 50px;
+      color: black;
+    font-size: 25px;
+    font-weight:bold;
+}
+.project .Project-card div{
+    padding: 15px;
+        background-color: var(--card-bg);
+    box-shadow: 0 4px 10px var(--card-shadow);
+    border-radius: 10px;
+}
+.project .Project-card div a{
+    color: #000;
+  
+}
+.project .Project-card div img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+.contact {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contact .input {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.contact .input input{
+    padding: 4px;
+    margin: 8px;
+    border-radius: 10px;
+      border: none;
+    overflow: none;
+}
+.contact .btn{
+     padding: 4px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+         background-color: var(--btn-bg);
+    color: var(--btn-text);
+}
+.contact .btn:hover{
+    background-color: #999; 
+}
+.contact .btn:active{
+    background-color: #777;
+}
+.mode-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.mode-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #25343F;
+}
+
+input:checked + .slider::before {
+    transform: translateX(30px);
+}
